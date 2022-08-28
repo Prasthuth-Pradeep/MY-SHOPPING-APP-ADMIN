@@ -9,10 +9,12 @@
         align-items: center;
         justify-content: center;
         height: $unit-50 + ($space-10 * 2);
-        font-size: $title-25;
-        font-weight: $font-600;
-        color: $font-color-primary;
         border-bottom: 1px solid $grey-light;
+        .brand-title{
+            font-size: $title-25;
+            font-weight: $font-600;
+            color: $primary-color;
+        }
     }
 
     .nav-bar {

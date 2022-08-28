@@ -1,9 +1,10 @@
 @import '../../assets/scss/variable';
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
-    .title{
+
+    .title {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -13,14 +14,75 @@
         color: $font-color-primary;
         border-bottom: 1px solid $grey-light;
     }
-    .nav-bar{
+
+    .nav-bar {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         padding: $space-10;
-        .nav-link{
-            font-size: $font-16;
+        padding-top: $space-5;
+        gap: $space-5;
+
+        .dashboard {
+            width: 100%;
+            cursor: pointer;
+            font-size: $font-18;
+            color: $font-color-secondary;
+            padding: $space-10 * 2 $space-10 $space-10 * 2 $space-10;
+            border-bottom: 1px solid $grey-light;
+        }
+
+        .nav-link {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            .nav-link-title {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: $space-10;
+                padding: $space-10 * 2 $space-10 $space-10 * 2 $space-10;
+
+                .link-title {
+                    font-size: $font-18;
+                    color: inherit;
+                    color: $font-color-secondary;
+                }
+
+                .show {
+                    transform: rotate(-90deg);
+                    font-size: $font-16;
+                    color: $font-color-secondary;
+                }
+
+                .hide {
+                    transform: rotate(0deg);
+                    font-size: $font-16;
+                    color: $font-color-secondary;
+                }
+            }
+
+            .product-list {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: $space-10;
+                background-color: $grey-light;
+                padding: $space-10 $space-10 $space-10 $space-10 * 2;
+                .link{
+                    font-size: $font-16;
+                    color: $font-color-secondary;
+                }
+            }
+        }
+
+        .active{
+            border-left: $space-10 solid $secondary-color;
         }
     }
 }

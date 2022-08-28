@@ -3,7 +3,28 @@
         <span class="brand-title">My shopping app</span>
     </div>
     <div class="nav-bar">
-        <div class="nav-link">Dashboard</div>
-        <div class="nav-link">Products</div>
+        <div class="dashboard" [routerLink]="['/dashboard']" routerLinkActive="active" >Dashboard</div>
+        <div class="nav-link">
+            <div class="nav-link-title" [routerLink]="['/product']" routerLinkActive="active">
+                <span class="link-title" >Products</span>
+                <span [class]="showMoreIconProduct" (click)="onShowList('p')">&#8595;</span>
+            </div>
+            <div class="product-list" *ngIf="showListProduct">
+                <span class="link">Add product</span>
+                <span class="link">List product</span>
+                <span class="link">Product details</span>
+            </div>
+        </div>
+        <div class="nav-link">
+            <div class="nav-link-title">
+                <span class="link-title">Orders</span>
+                <span [class]="showMoreIconOrder" (click)="onShowList('o')">&#8595;</span>
+            </div>
+            <div class="product-list" *ngIf="showListOrders">
+                <span class="link">New orders</span>
+                <span class="link">List orders</span>
+                <span class="link">Order details</span>
+            </div>
+        </div>
     </div>
 </div>

@@ -13,6 +13,10 @@ const routes: Routes = [
     loadChildren: () =>
       import('./sections/product/product.module').then((m) => m.ProductModule)
   },
+  
+
+  { path: '**', redirectTo: 'dashboard' },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
 ];
 
 @NgModule({

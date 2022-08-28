@@ -7,7 +7,7 @@
     justify-content: center;
     gap: $unit-50;
     width: 100%;
-    padding: $space-25;
+    padding: $space-25 $space-25 $unit-100 $space-25;
 
     .todays-brief {
         width: 100%;
@@ -58,7 +58,8 @@
 
         .sales-report,
         .order-overview,
-        .purchase-by-country {
+        .purchase-by-country,
+        .todays-sellings {
             display: flex;
             flex-direction: column;
             padding: $space-10;
@@ -75,10 +76,10 @@
                 border-bottom: 1px solid $grey-dark;
             }
 
-            hr {}
         }
 
-        .order-overview {
+        .order-overview,
+        .todays-sellings {
             width: ($unit-200 * 2) + $space-25;
             height: $unit-200 * 2;
         }

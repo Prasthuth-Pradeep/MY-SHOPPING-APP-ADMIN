@@ -1,0 +1,35 @@
+@import '../assets/scss/variable';
+
+.container {
+    // border: 1px solid $grey-light;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+
+    .side-one {
+        border: none;
+        border-right: 1px solid $grey-light;
+        width: $unit-200 + $unit-100;
+    }
+
+    .side-two {
+        border: none;
+        // border: 1px solid $grey-light;
+        width: 100%;
+        overflow: hidden;
+
+        .header {
+            height: $unit-50 + ($space-10 * 2);
+            border: none;
+            border-bottom: 1px solid $grey-light;
+            overflow: hidden;
+        }
+
+        .content {
+            border: none;
+            border-left: 1px solid $grey-light;
+            height: 100%;
+            overflow: scroll;
+        }
+    }
+}

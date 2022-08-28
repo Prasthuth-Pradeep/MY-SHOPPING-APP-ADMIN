@@ -1,0 +1,68 @@
+@import '../../assets/scss/variable';
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $space-10 $space-25 $space-10 $space-25;
+    height: 100%;
+    width: 100%;
+
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .search-input {
+            width: ($unit-100 + $unit-50) * 2;
+            height: $space-10 * 4;
+            border-radius: $space-15;
+            border: none;
+            outline: none;
+            background-color: #f7f7f7;
+            padding: $space-10;
+            font-size: $font-16;
+        }
+
+        .search-input::placeholder {
+            color: $font-color-tertiary;
+            font-size: $font-16;
+        }
+
+        .search-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: $unit-50 + $space-15;
+            border-radius: $space-15;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            background-color: $grey-light;
+            color: $font-color-secondary;
+            font-size: $font-16;
+            cursor: pointer;
+
+            position: absolute;
+            right: 0;
+            height: 100%;
+        }
+    }
+
+    .user-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: $space-15;
+
+        .link {
+            color: $font-color-secondary;
+            font-size: $font-16;
+            cursor: pointer;
+        }
+
+        .link:hover {
+            color: $font-color-primary;
+        }
+    }
+}

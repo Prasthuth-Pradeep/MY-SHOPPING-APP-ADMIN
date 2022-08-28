@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/scss/variable';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    ::-webkit-scrollbar {
+      width: $space-10;
+      display: block;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color:$tertiary-color;
+    }
+  }
+
+  html{
+  font-size: 62.5%; // 10px/16px = 0.625 = 62.5
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    cursor: default;
+    background-color: $primary-background;
+    color: $primary-font-color;
+  }

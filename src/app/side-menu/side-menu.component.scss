@@ -1,0 +1,26 @@
+@import '../../assets/scss/variable';
+
+.container{
+    display: flex;
+    flex-direction: column;
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: $unit-50 + ($space-10 * 2);
+        font-size: $title-25;
+        font-weight: $font-600;
+        color: $font-color-primary;
+        border-bottom: 1px solid $grey-light;
+    }
+    .nav-bar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: $space-10;
+        .nav-link{
+            font-size: $font-16;
+        }
+    }
+}

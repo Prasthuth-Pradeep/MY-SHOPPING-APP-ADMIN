@@ -1,0 +1,86 @@
+@import '../../../assets/scss/variable';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: $unit-50;
+    width: 100%;
+    padding: $space-25;
+
+    .todays-brief {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .data {
+            padding: $space-10;
+            border-radius: $space-15;
+            border: 1px solid $grey-light;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: $space-15;
+            color: $font-color-secondary;
+            box-shadow: 0px 0px 5px rgb(0 0 0 / 8%);
+
+            .set {
+                display: flex;
+                flex-direction: column;
+
+                .count {
+                    font-size: $title-25 + $space-10;
+                    font-weight: $font-600;
+                }
+
+                .title {
+                    font-size: $font-16;
+                }
+
+                .icon {
+                    width: $unit-50;
+                    height: $space-15 * 2;
+                }
+            }
+        }
+    }
+
+    .todays-data,
+    .report {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: $space-25;
+        flex-wrap: wrap;
+
+        .sales-report,
+        .order-overview,
+        .purchase-by-country {
+            display: flex;
+            flex-direction: column;
+            padding: $space-10;
+            width: $unit-200 * 3;
+            height: $unit-200 * 2;
+            border: 1px solid $grey-light;
+            border-radius: $space-15;
+            box-shadow: 0px 0px 5px rgb(0 0 0 / 8%);
+
+            .title {
+                font-size: $title-25;
+                color: $font-color-secondary;
+                padding: 0rem 0rem $space-10 0rem;
+                border-bottom: 1px solid $grey-dark;
+            }
+
+            hr {}
+        }
+
+        .order-overview {
+            width: ($unit-200 * 2) + $space-25;
+            height: $unit-200 * 2;
+        }
+    }
+}

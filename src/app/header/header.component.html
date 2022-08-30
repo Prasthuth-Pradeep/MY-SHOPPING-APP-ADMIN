@@ -1,12 +1,18 @@
 <div class="container">
-    <div class="search">
-        <input type="text" class="search-input" placeholder="search...">
-        <span class="search-text">Search</span>
-    </div>
+    <div class="set">
+        <div class="menu-collapse">
+            <div class="collapse-button" (click)="onCollapseSideNav()">
+                <span [class]="toggleBarClass"></span>
+            </div>
+            <div class="search">
+                <input type="text" class="search-input" placeholder="search...">
+                <span class="search-text">Search</span>
+            </div>
+        </div>
 
-    <div class="user-container">
-        <div class="link">User</div>
-        <div class="link">Notification</div>
-        <div class="link">Settings</div>
+        <div class="user-container">
+            <div class="link">User</div>
+            <div class="link">Notification</div>
+            <div class="link">Settings</div>
+        </div>
     </div>
-</div>

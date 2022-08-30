@@ -6,10 +6,16 @@
     overflow: hidden;
     display: flex;
 
-    .side-one {
+    .side-nav {
         border: none;
         border-right: 1px solid $grey-light;
         width: $unit-200 + $unit-100;
+    }
+
+    .compact{
+        border: none;
+        border-right: 1px solid $grey-light;
+        width: $unit-100;
     }
 
     .side-two {

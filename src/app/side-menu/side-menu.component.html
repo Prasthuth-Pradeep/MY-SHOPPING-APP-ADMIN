@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="compact == false">
     <div class="title">
         <span class="brand-title">My shopping app</span>
     </div>
@@ -24,6 +24,37 @@
                 <span class="link">New orders</span>
                 <span class="link">List orders</span>
                 <span class="link">Order details</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="collapse" *ngIf="compact == true">
+    <div class="title">
+        <span class="brand-title">MSA</span>
+    </div>
+    <div class="nav-bar">
+        <div class="dashboard" [routerLink]="['/dashboard']" routerLinkActive="active" >D</div>
+        <div class="nav-link">
+            <div class="nav-link-title" [routerLink]="['/product']" routerLinkActive="active">
+                <span class="link-title" >P</span>
+                <span [class]="showMoreIconProduct" (click)="onShowList('p')">&#8595;</span>
+            </div>
+            <div class="product-list" *ngIf="showListProduct">
+                <span class="link">AP</span>
+                <span class="link">LP</span>
+                <span class="link">PD</span>
+            </div>
+        </div>
+        <div class="nav-link">
+            <div class="nav-link-title">
+                <span class="link-title">O</span>
+                <span [class]="showMoreIconOrder" (click)="onShowList('o')">&#8595;</span>
+            </div>
+            <div class="product-list" *ngIf="showListOrders">
+                <span class="link">NO</span>
+                <span class="link">LO</span>
+                <span class="link">OD</span>
             </div>
         </div>
     </div>

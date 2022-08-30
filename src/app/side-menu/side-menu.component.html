@@ -3,22 +3,22 @@
         <span class="brand-title">My shopping app</span>
     </div>
     <div class="nav-bar">
-        <div class="dashboard" [routerLink]="['/dashboard']" routerLinkActive="active" >Dashboard</div>
+        <span class="dashboard" [routerLink]="['/dashboard']" routerLinkActive="active">Dashboard</span>
         <div class="nav-link">
             <div class="nav-link-title" [routerLink]="['/product']" routerLinkActive="active">
-                <span class="link-title" >Products</span>
-                <span [class]="showMoreIconProduct" (click)="onShowList('p')">&#8595;</span>
+                <span class="link-title" (click)="onShowList('p')">Products</span>
+                <span [class]="showMoreIconProduct" >&#8595;</span>
             </div>
             <div class="product-list" *ngIf="showListProduct">
-                <span class="link">Add product</span>
-                <span class="link">List product</span>
-                <span class="link">Product details</span>
+                <span class="link" [routerLink]="['product/add']" routerLinkActive="active-sub" >Add product</span>
+                <span class="link" [routerLink]="['product/list']" routerLinkActive="active-sub">List product</span>
+                <span class="link" [routerLink]="['product/details']" routerLinkActive="active-sub">Product details</span>
             </div>
         </div>
         <div class="nav-link">
             <div class="nav-link-title">
-                <span class="link-title">Orders</span>
-                <span [class]="showMoreIconOrder" (click)="onShowList('o')">&#8595;</span>
+                <span class="link-title" (click)="onShowList('o')">Orders</span>
+                <span [class]="showMoreIconOrder" >&#8595;</span>
             </div>
             <div class="product-list" *ngIf="showListOrders">
                 <span class="link">New orders</span>

@@ -1,0 +1,6 @@
+@import '../../../../assets/scss/variable';
+
+canvas{
+    height: ($unit-200 * 2) + $unit-50 ;
+    margin: $space-25;
+}

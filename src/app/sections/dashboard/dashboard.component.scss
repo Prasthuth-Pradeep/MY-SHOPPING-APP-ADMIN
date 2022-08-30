@@ -24,6 +24,7 @@
             align-items: center;
             justify-content: center;
             gap: $space-15;
+            margin: $space-15;
             color: $font-color-secondary;
             box-shadow: 0px 0px 5px rgb(0 0 0 / 8%);
 
@@ -50,10 +51,12 @@
 
     .todays-data,
     .report {
+        width: 100%;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         gap: $space-25;
+        padding: $space-15;
         flex-wrap: wrap;
 
         .sales-report,
@@ -63,8 +66,8 @@
             display: flex;
             flex-direction: column;
             padding: $space-10;
-            width: $unit-200 * 3;
-            height: $unit-200 * 2;
+            width: $unit-200 * 4 + $unit-100;
+            height: $unit-100 * 5 + $unit-50 ;
             border: 1px solid $grey-light;
             border-radius: $space-15;
             box-shadow: 0px 0px 5px rgb(0 0 0 / 8%);
@@ -80,8 +83,7 @@
 
         .order-overview,
         .todays-sellings {
-            width: ($unit-200 * 2) + $space-25;
-            height: $unit-200 * 2;
+            width: ($unit-200 * 3) + $space-25;
         }
     }
 }
